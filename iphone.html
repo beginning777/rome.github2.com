@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин iPhone</title>
+    <link rel="stylesheet" href="iphone.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин iPhone</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="auth-buttons">
+            <button class="auth-button" onclick="showPanel('registrationModal')">Регистрация</button>
+            <button class="auth-button" onclick="showPanel('loginModal')">Вход</button>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <div class="navbar" id="navbar">
+        <a href="#home">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+    </div>
+
+    <!-- Геро-секция -->
+    <section id="hero">
+        <h2>Добро пожаловать в наш магазин!</h2>
+        <p>Найдите идеальный iPhone для себя.</p>
+        <a href="#catalog" style="text-decoration: none; background-color: white; padding: 10px 15px; color: #4e54c8; border-radius: 5px;">Посмотреть каталог</a>
+    </section>
+
+    <!-- Всплывающее окно для регистрации -->
+    <div class="modal" id="registrationModal">
+        <div class="panel">
+            <h2>Регистрация</h2>
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" placeholder="Введите email" required>
+            <label for="regPassword">Пароль:</label>
+            <input type="password" id="regPassword" placeholder="Введите пароль" required>
+            <input type="submit" value="Зарегистрироваться">
+            <button onclick="closeModal('registrationModal')">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Всплывающее окно для входа -->
+    <div class="modal" id="loginModal">
+        <div class="panel">
+            <h2>Вход</h2>
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" placeholder="Введите email" required>
+            <label for="loginPassword">Пароль:</label>
+            <input type="password" id="loginPassword" placeholder="Введите пароль" required>
+            <input type="submit" value="Войти">
+            <button onclick="closeModal('loginModal')">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Каталог товаров -->
+    <section id="catalog">
+        <h2>Наши товары</h2>
+        <div class="products">
+            <!-- Товары -->
+            <div class="product">
+                <h3>iPhone 14 Pro Max</h3>
+                <p>Мощнейший флагман</p>
+                <p class="price">$1299</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone14promax', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 14 Pro</h3>
+                <p>Высокая производительность</p>
+                <p class="price">$1199</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone14pro', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 14</h3>
+                <p>Отличный баланс</p>
+                <p class="price">$999</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone14', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 13 Pro Max</h3>
+                <p>Флагман прошлого года</p>
+                <p class="price">$1099</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone13promax', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 13 Pro</h3>
+                <p>Мощный процессор</p>
+                <p class="price">$999</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone13pro', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 13</h3>
+                <p>Долгое время работы</p>
+                <p class="price">$799</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone13', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 12 Pro Max</h3>
+                <p>Большой экран</p>
+                <p class="price">$1099</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone12promax', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 12 Pro</h3>
+                <p>Солидная мощность</p>
+                <p class="price">$899</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone12pro', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 12</h3>
+                <p>Качественный дисплей</p>
+                <p class="price">$699</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone12', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 11 Pro Max</h3>
+                <p>Отличная камера</p>
+                <p class="price">$999</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone11promax', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 11 Pro</h3>
+                <p>Непревзойденный дизайн</p>
+                <p class="price">$899</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone11pro', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 11</h3>
+                <p>Хорошее соотношение цены и качества</p>
+                <p class="price">$599</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone11', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone SE (2022)</h3>
+                <p>Компактный и мощный</p>
+                <p class="price">$429</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphonese2022', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone XR</h3>
+                <p>Яркий дисплей</p>
+                <p class="price">$399</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphonexr', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone XS Max</h3>
+                <p>Большой экран, небольшая цена</p>
+                <p class="price">$799</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphonexsmax', '_blank')">Купить</button>
+            </div>
+            <div class="product">
+                <h3>iPhone 8</h3>
+                <p>Классика Apple</p>
+                <p class="price">$349</p>
+                <button class="buy-button" onclick="window.open('https://example.com/buy-iphone8', '_blank')">Купить</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" style="padding: 40px; background-color: #fff;">
+        <h2>О нас</h2>
+        <p>Мы - ваш надежный источник для покупки iPhone. Обеспечиваем высокое качество и отличный сервис.</p>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" style="padding: 40px; background-color: #fff;">
+        <h2>Контакты</h2>
+        <p>Если у вас есть вопросы, вы можете связаться с нами по адресу: support@example.com</p>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2024 Магазин iPhone. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.style.display = navbar.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function showPanel(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
